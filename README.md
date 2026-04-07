@@ -1,27 +1,108 @@
-# CrmWeb
+# 🅰️ Crm web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+> Crm para gestion de tareas
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📋 Requisitos previos
 
-## Code scaffolding
+Asegúrate de tener instalado lo siguiente antes de continuar:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Herramienta | Versión recomendada | Verificar |
+|-------------|---------------------|-----------|
+| [Node.js](https://nodejs.org/) | >= 18.x | `node -v` |
+| [npm](https://www.npmjs.com/) | >= 9.x | `npm -v` |
+| [Angular CLI](https://angular.io/cli) | >= 17.x | `ng version` |
 
-## Build
+Para instalar Angular CLI globalmente:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm install -g @angular/cli
+```
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚀 Instalación
 
-## Running end-to-end tests
+### 1. Clonar el repositorio
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+git clone https://github.com/OscarEPC/crm-web.git
+cd crm-web
+```
 
-## Further help
+### 2. Instalar dependencias
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm install
+```
+
+## 🖥️ Correr el proyecto
+
+### Servidor de desarrollo
+
+```bash
+ng serve
+```
+
+La aplicación estará disponible en: **http://localhost:4200**
+
+El servidor se recargará automáticamente al detectar cambios en los archivos fuente.
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+nombre-del-proyecto/
+├── src/
+│   ├── app/
+│   │   ├── atuh/            # Servicios singleton, guards, interceptores
+│   │   ├── dashboard/          # Componentes, pipes y directivas reutilizables
+│   │   ├── app.component.css
+│   │   ├── app.component.html
+│   │   ├── app.module.ts
+│   │   └── app-routing.module.ts
+│   ├── assets/              # Imágenes, fuentes, íconos
+│   ├── environments/        # Configuración por entorno
+│   └── styles/              # Estilos globales
+├── angular.json
+├── package.json
+└── tsconfig.json
+```
+
+---
+
+## 🌐 Variables de entorno
+
+| Variable | Descripción | Requerida |
+|----------|-------------|-----------|
+| `apiUrl` | URL base de la API backend | ✅ |
+| `production` | Modo producción (`true`/`false`) | ✅ |
+
+---
+
+### Convención de commits
+
+Este proyecto usa [Conventional Commits](https://www.conventionalcommits.org/es/):
+
+- `feat:` nueva funcionalidad
+- `fix:` corrección de bug
+- `docs:` cambios en documentación
+- `style:` cambios de formato (sin lógica)
+- `refactor:` refactorización de código
+- `test:` agregar o modificar pruebas
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia [MIT](LICENSE).
+
+---
+
+## 👤 Autor
+
+**Tu Nombre**
+- GitHub: [@OscarEduDev](https://github.com/OscarEduDev.git)
+- Email: oscar.edu.dev@gmail.com
