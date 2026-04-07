@@ -1,0 +1,27 @@
+<button class="btn btn-primary ms-5 mt-5" routerLink="/dashboard/home"> <- Atras</button>
+<div class="container mt-4" style="max-width: 500px;">
+  <form [formGroup]="taskForm" (ngSubmit)="submit()" class="border p-4 rounded shadow-sm bg-white">
+    <h4 class="mb-3 text-center">Crear Tarea</h4>
+
+    <div class="mb-3">
+      <label for="title" class="form-label">Título</label>
+      <input
+        id="title"
+        type="text"
+        formControlName="title"
+        class="form-control"
+        placeholder="Nombre de la tarea"
+      />
+      <div *ngIf="taskForm.get('title')?.invalid && taskForm.get('title')?.touched" class="text-danger mt-1">
+        Título obligatorio (mínimo 3 caracteres)
+      </div>
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="completed" formControlName="completed" />
+      <label class="form-check-label" for="completed">Completada</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Crear Tarea</button>
+  </form>
+</div>
